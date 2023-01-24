@@ -1,0 +1,15 @@
+pipeline {
+    agent any 
+    stages{
+        stage('git clone'){
+            steps{
+                git branch: 'main', url: 'https://github.com/FlorinAutomation/TestStuff.git'
+            }
+        }
+        stage('test stage'){
+            steps{
+                echo "Testing Completed"
+            }
+        }
+    }
+}
